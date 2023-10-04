@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#card {
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  position: relative;
+}
+#story-container {
+  height: 130px;
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+  white-space: nowrap;
+  padding: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+#story-container::-webkit-scrollbar {
+  display: none;
+}
+#story {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 3px solid green;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 5px;
+  user-select: none;
+}
+#story img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+#full-screen {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  display: none;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+/*tips: always give parent div position to relative after selecting the child div position absolute*/
